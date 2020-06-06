@@ -1,49 +1,44 @@
 body {
   background-color: #42789e0d !important;
 }
-.tableContainer {
-  max-width: 800px;
-  margin: 10% auto 0;
+.container {
   text-align: right;
+  width: 80%;
+  max-width: 800px;
+  margin: 7% auto 0;
+}
+.tableContainer {
+  margin-bottom: 15px;
+  border-radius: .28571429rem;
+  box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+  overflow-x:auto;
 }
 .ui.celled.table {
   text-align: center;
 }
+.ui.table tr:last-child td:last-child {
+  border-bottom-right-radius: .28571429rem;
+}
+.ui.table tr:last-child td:first-child {
+  border-bottom-left-radius: .28571429rem;
+}
 .rc-color-picker-trigger {
   margin-left: 20px;
+  vertical-align: bottom;
 }
 .colorSpan {
   min-width: 60px;
   display: inline-block;
 }
-
-
-
-
-.fade-enter div {
-  overflow-y: hidden;
-  max-height: 0;
+.ui.celled.table tr td:first-child {
+  width: 38.1%;
 }
-
-.fade-enter-active div {
-  max-height: 50px;
-  transition: all 500ms ease-in;
+.ui.celled.table tr td:nth-child(2) {
+  width: 38.2%;
 }
-.fade-exit div {
-  max-height: 50px;
-}
-.fade-exit-active div {
-  max-height: 0;
-  overflow-y: hidden;
-  transition: all 500ms ease-in;
-}
-
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media only screen and (max-width: 767px) {
+  .ui.table:not(.unstackable) thead {
+    display: table-header-group !important;
+    background-color: white;
   }
 }
